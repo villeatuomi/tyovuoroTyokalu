@@ -2,20 +2,21 @@
 <html lang="fi" dir="ltr">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title>Työkalu Essille - päivämäärien ja aikojen testausta</title>
+    <title>Työkalu Vaimolle - päivämäärien ja aikojen testausta</title>
     <!--    #region -->
 </head>
 
 <body>
     <div id="div1">
-        <form action="Tapahtumaupload" method="post" id="formEssi">
+        <form action="Tapahtumaupload" method="post" id="form1">
             <fieldset>
                 <legend>Alkutietojen syöttäminen</legend>
                 <br>
                 <label>Tapahtuman nimi
                     <br>
-                    <input type="text" name="nimi" placeholder="Esim. Essi töissä" required>
+                    <input type="text" name="nimi" placeholder="Esim. Essi töissä" value="Essi töissä" required>
                 </label>
                 <br>
                 <br>
@@ -32,7 +33,7 @@
                 </label>
                 <br>
                 <br>
-                <button type="submit">Muuta CSV:ksi</button>
+                <button type="submit">Vuorojen Syöttöön</button>
                 <br>
                 <br>
             </fieldset>
@@ -48,11 +49,18 @@
                 <h6>Tähän tulee vuoronlisäyksessä kyseisen päivän päivämäärä</h6>
                 <label>Vuorot
                     <br>
-                    <input type="radio" name="vuoro" value="9:00 AM-5:00 PM"> Aamu (9:00 - 17:00)
+                    <input type="radio" name="vuoro" value="9:00 AM-5:00 PM" required> Aamu (9:00 - 17:00)
                     <br>
-                    <input type="radio" name="vuoro" value="10:00 AM-6:00 PM"> Päivä (10:00 - 18:00)
+                    <input type="radio" name="vuoro" value="10:00 AM-6:00 PM" required> Päivä (10:00 - 18:00)
                     <br>
-                    <input type="radio" name="vuoro" value="11:10 AM-7:10 PM"> Ilta (11:10 - 19:10)
+                    <input type="radio" name="vuoro" value="11:10 AM-7:10 PM" required> Ilta (11:10 - 19:10)
+                    <br>
+                    <input type="radio" name="vuoro" value="vapaa" required> Vapaapäivä
+                    <br>
+                    <input type="radio" name="vuoro" value="9:45 AM-4:15 PM" required> Lauantai (9:45 - 16:15)
+                    <br>
+                    <input type="radio" name="vuoro" value="CUSTOM" required> Custom (Alkamisaika: <input type="time"
+                        name="customStart"> Loppumisaika: <input type="time" name="customEnd">)
                     <br>
                 </label>
                 <br>
