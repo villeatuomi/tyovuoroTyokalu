@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fi" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Työkalu Essille - päivämäärien ja aikojen testausta</title>
+    <!--    #region -->
+</head>
+
+<body>
+    <div id="div1">
+        <form action="Tapahtumaupload" method="post" id="formEssi">
+            <fieldset>
+                <legend>Alkutietojen syöttäminen</legend>
+                <br>
+                <label>Tapahtuman nimi
+                    <br>
+                    <input type="text" name="nimi" placeholder="Esim. Essi töissä" required>
+                </label>
+                <br>
+                <br>
+                <label>Ensimmäinen päivämäärä
+                    <br>
+                    <input type="date" name="alkaapvm" required>
+                </label>
+                <br>
+
+                <br>
+                <label>Viimeinen päivämäärä
+                    <br>
+                    <input type="date" name="loppuupvm" required>
+                </label>
+                <br>
+                <br>
+                <button type="submit">Muuta CSV:ksi</button>
+                <br>
+                <br>
+            </fieldset>
+        </form>
+        <br>
+    </div>
+
+    <div id="div2">
+        <form action="vuorojenlisays" method="post" id="form2">
+            <fieldset>
+                <legend>Työvuorojen syöttäminen</legend>
+
+                <h6>Tähän tulee vuoronlisäyksessä kyseisen päivän päivämäärä</h6>
+                <label>Vuorot
+                    <br>
+                    <input type="radio" name="vuoro" value="9:00 AM-5:00 PM"> Aamu (9:00 - 17:00)
+                    <br>
+                    <input type="radio" name="vuoro" value="10:00 AM-6:00 PM"> Päivä (10:00 - 18:00)
+                    <br>
+                    <input type="radio" name="vuoro" value="11:10 AM-7:10 PM"> Ilta (11:10 - 19:10)
+                    <br>
+                </label>
+                <br>
+                <!--  <button type="submit">Seuraava päivä</button>  #region -->
+                <input type="submit">
+            </fieldset>
+        </form>
+    </div>
+
+    <div id="div3">
+        <p>moi</p>
+    </div>
+    <!-- #region -->
+    <script src="moment.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
